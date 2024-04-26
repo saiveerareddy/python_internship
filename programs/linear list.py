@@ -1,7 +1,9 @@
-l=list(map(int,input("Enter a number: ").split(" ")))
-key=int(input("Enter a number: "))
+l = list(map(int, input("Enter numbers separated by spaces: ").split()))
+key = int(input("Enter a number to search: "))
+
 for i in range(len(l)):
     if key == l[i]:
-        print(f"the key found in {i}th in list")
-if key not in l:
-    print(f"the key not in list")
+        print(f"The key {key} is found at index {i} in the list.")
+        break
+else:
+    print(f"The key {key} is not in the list.")
